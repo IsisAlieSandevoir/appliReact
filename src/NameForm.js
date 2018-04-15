@@ -6,6 +6,7 @@ import List from './List.js';
 class NameForm extends Component {
   constructor(props) {
     super(props);
+    console.log("coucou");
     this.state = {
         termFirstName: 'Firstname',
         termLastName: 'LASTNAME',
@@ -14,7 +15,7 @@ class NameForm extends Component {
         items: [],
         search: 'Metier'
     };
-}
+  }
 
   onChangeFirstName = (event) => {
     this.setState({
@@ -56,6 +57,7 @@ class NameForm extends Component {
   }
 
   render() {
+    
     return (
           <form className = "NameForm" onSubmit={this.onSubmit}>
             <label>First Name:

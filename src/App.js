@@ -17,6 +17,11 @@ class App extends Component {
         items: []
     };
   }
+  
+  
+  componentwillMount(){
+    console.log("ok");
+  }  
 
   render() {
     return (
@@ -27,8 +32,8 @@ class App extends Component {
         </header>
 
         <body id="container">
-          <NameForm />
-          <ItemsSearch />
+          <NameForm list={this.state}/>
+          {/* <ItemsSearch /> */}
           <div className="Liste" >
             <h2> List of participants : </h2>
             <List items={this.state.items} />
